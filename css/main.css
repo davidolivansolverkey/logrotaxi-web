@@ -1,0 +1,481 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	padding-top: 82px;
+}
+
+*{
+	outline: none !important;
+}
+
+a, a:hover{
+	color: #81ac28
+}
+
+strong{
+	font-weight: 500;
+}
+
+
+/***********************************************
+CABECERA
+************************************************/
+.navbar {
+    background-color: #81ac28;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	text-align: center;
+    color:#fff;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active>.nav-link:hover{
+	color:#16290b;
+}
+
+/*
+.nav-link:after {
+	display: none;
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 3px;
+    background-color: #fff;
+    right: 0;
+}
+
+.nav-link.last:after {
+    display: none;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/***********************************************
+FOOTER
+************************************************/
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+footer h5 {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+footer h5:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 50px;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -25px;
+    bottom: -20px;
+}
+
+footer hr {
+    border-color: #fff;
+}
+
+
+
+
+
+
+/***********************************************
+CONTENIDO	
+************************************************/
+.main-banner {
+    background-image: url(../img/banner-main.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding: 200px 0;
+    background-size: cover;
+}
+
+.main-banner.rutas {
+    background-image: url(../img/main-ruta.jpg);
+    background-position: top center;
+}
+
+.main-banner.camino {
+    background-image: url(../img/main-camino.jpg);
+    background-position: top left;
+}
+
+.main-banner.conductor {
+    background-image: url(../img/main-conductor.jpg);
+    background-position: center;
+}
+
+.main-banner.reservar {
+    background-image: url(../img/main-reservar.jpg);
+    background-position: center;
+}
+
+.main-banner.urgente {
+    background-image: url(../img/main-urgente.jpg);
+    background-position: center;
+}
+
+.main-banner.taxi {
+    background-image: url(../img/main-taxi.jpg);
+    background-position: center left;
+}
+
+.main-banner.vehiculos {
+    background-image: url(../img/main-vehiculos.jpg);
+    background-position: center;
+}
+
+.main-banner.agoncillo {
+    background-image: url(../img/aeropuerto-agoncillo.jpg);
+    background-position: center;
+}
+
+.main-banner.bilbao {
+    background-image: url(../img/aeropuerto-bilbao.jpg);
+    background-position: center;
+}
+
+.main-banner.pamplona {
+    background-image: url(../img/aeropuerto-pamplona.jpg);
+    background-position: center;
+}
+
+.main-banner.madrid {
+    background-image: url(../img/aeropuerto-madrid.jpg);
+    background-position: center;
+}
+
+.main-banner.zaragoza {
+    background-image: url(../img/aeropuerto-zaragoza.jpg);
+    background-position: center;
+}
+
+.main-banner.santander {
+    background-image: url(../img/aeropuerto-santander.jpg);
+    background-position: center;
+}
+
+.main-banner.vitoria {
+    background-image: url(../img/aeropuerto-vitoria.jpg);
+    background-position: center;
+}
+
+.main-banner.biarritz {
+    background-image: url(../img/aeropuerto-biarritz.jpg);
+    background-position: center;
+}
+
+.main-banner.barcelona {
+    background-image: url(../img/aeropuerto-barcelona.jpg);
+    background-position: center;
+}
+
+.bg-light {
+    background-color: #f5f5f5!important;
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #81ac28;
+}
+
+textarea {
+    width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    border: 1px solid #81ac28;
+}
+
+input[type="submit"] {
+    display: block;
+    border: none;
+    background-color: #81ac28;
+    color: #fff;
+    padding: 15px 80px;
+}
+
+ul.box1{
+	padding-left: 0;
+}
+
+ul.box1 li {
+    list-style: none;
+    background-image: url(../img/check.png);
+    background-repeat: no-repeat;
+    padding-left: 38px;
+    margin-bottom: 11px;
+    background-position-x: left;
+    background-position-y: 3px;
+}
+
+.back-block{
+	background-color: #1A472B;
+	border-radius: 10px;
+	display: block;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+  	-moz-transition: all 0.5s ease-in-out 0s;
+  	-o-transition: all 0.5s ease-in-out 0s;
+  	-ms-transition: all 0.5s ease-in-out 0s;
+ 	 transition: all 0.5s ease-in-out 0s;
+}
+
+.back-block:hover{
+	text-decoration: none;
+	background-color: #81ac28;
+}
+
+.msgcookie {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    width: 300px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-family: sans-serif;
+    z-index: 999;
+    left: 20px;
+    box-shadow: 0 -1px 10px 0 rgba(172, 171, 171, 0.3);
+}
+
+.msgcookie > div {
+    margin: 0 auto;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+msgcookie p a:link,.msgcookie p a:active,.msgcookie p a:visited,.msgcookie p a:hover{
+    color:#fff
+}
+
+.msgcookie a.btn-aviso {
+    border-radius: 2px;
+    opacity: 1;
+    font-size: 14px;
+    background-color: #81AC28;
+    color: #fff;
+    text-shadow: 0 0 0 #fff;
+    font-weight: normal;
+    padding: 3px 10px;
+    line-height:inherit;
+    float: none;
+    margin-right: 10px;
+}
+
+.msgcookie a.btn-aviso:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************
+RESPONSIVE
+************************************************/
+
+
+
+
+
+
+@media (min-width: 1200px){
+.navbar-expand-xl .navbar-nav .nav-link span {
+    background-color: rgba(255,255,255,0.3);
+    display: block;
+    padding: 6px 9px 4px;
+    border-radius: 7px;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+  	-moz-transition: all 0.5s ease-in-out 0s;
+  	-o-transition: all 0.5s ease-in-out 0s;
+  	-ms-transition: all 0.5s ease-in-out 0s;
+ 	 transition: all 0.5s ease-in-out 0s;
+}
+
+.navbar-expand-xl .navbar-nav .active .nav-link span{
+	background-color: transparent;
+	font-weight: 500;
+}
+
+.navbar-expand-xl .navbar-nav .nav-link:hover span{
+	background-color: transparent;
+}
+
+.navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: 7px;
+    padding-left: 7px;
+    text-align: center;
+}
+}
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1461px){
+body{
+	padding-top:74px;
+}
+
+.navbar-brand img {
+    width: 210px;
+}
+
+.navbar-expand-xl .navbar-nav .nav-link {
+    font-size: 13px;
+    line-height: 16px;
+}
+}
+
+
+
+
+@media (max-width: 1199px){
+.navbar-light .navbar-nav .nav-link {
+    border-bottom: 1px dotted;
+    padding: 12px 16px;
+}
+
+.navbar-light .navbar-nav >li:last-child .nav-link {
+    border-bottom: none;
+    padding: 12px 16px;
+}
+
+body{
+	padding-top:76px;
+}
+
+.nav-link br{
+	display: none;
+}
+
+.nav-link:after {
+    display: none;
+}
+
+button.navbar-toggler {
+    border: 0 !important;
+    display: block !important;
+    float: none !important;
+}
+
+.navbar-toggler span {
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    display: block;
+    margin: 6px 0;
+   -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.navbar-toggler span:first-child {
+    transform: rotate(0deg);
+    position: relative;
+    top: 0;
+}
+
+.navbar-toggler span:nth-child(2) {
+    transform: rotate(0deg);
+    position: relative;
+    bottom: 0;
+}
+
+.navbar-toggler span:last-child {
+    opacity: 1;
+}
+
+.navbar-toggler.in span:first-child {
+    transform: rotate(-45deg);
+    top: 4px;
+}
+
+.navbar-toggler.in span:nth-child(2) {
+    transform: rotate(45deg);
+    bottom: 4px;
+}
+
+.navbar-toggler.in span:last-child {
+    opacity: 0;
+}
+}
+
+
+
+
+@media (max-width: 480px){
+input[type="submit"] {
+    margin: 0 auto;
+}
+
+form label{
+    font-size: 17px;
+}
+
+.main-banner {
+    padding: 150px 0;
+}
+
+.h1, h1 {
+    font-size: 2rem;
+}
+
+.h2, h2 {
+    font-size: 1.5rem;
+}
+
+body{
+	padding-top:71px;
+}
+
+.navbar-brand img {
+    width: 230px;
+}
+}
+
+

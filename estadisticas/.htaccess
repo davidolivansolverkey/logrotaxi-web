@@ -1,0 +1,18 @@
+AuthMySQLHost localhost
+AuthMySQLUser wwwlogrotaxicom
+AuthMySQLPassword knet$8687
+AuthMySQLDB Autentificacion
+AuthName "Acceso Restringido"
+AuthType Basic
+AuthMySQLUserTable wwwlogrotaxicom
+AuthMySQLNameField Usuario
+AuthMySQLPasswordField Password
+AuthMySQLGroupField Grupo
+AuthMySQLAuthoritative On
+AuthMySQLScrambledPasswords On
+AuthMySQLNoPasswd Off
+<Limit GET POST PUT>
+order deny,allow
+allow from all
+require user  logrotax
+</Limit>
