@@ -1,4 +1,4 @@
-const { Resend } = require("resend");
+const nodemailer = require("nodemailer");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
@@ -30,7 +30,34 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: "Email no válido." });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT) || 465,
+    secure: (Number(process.env.SMTP_PORT) || 465) === 465,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  const textBody = [
+    `Empresa: ${empresa || "—"}`,
+    `Nombre: ${nombre}`,
+    `Teléfono: ${phone}`,
+    `Email: ${email}`,
+    `Día de recogida: ${diarecogida || "—"}`,
+    `Hora de recogida: ${horarecogida || "—"}`,
+    `Dirección de recogida: ${direccionrecogida || "—"}`,
+    `Ciudad de recogida: ${ciudadrecogida || "—"}`,
+    `Destino: ${destino || "—"}`,
+    `Ciudad de destino: ${ciudaddestino || "—"}`,
+    "",
+    `Observaciones:`,
+    observaciones || "Ninguna",
+  ].join("\n");
 
   const htmlBody = `
     <h2 style="color:#333;">Nueva solicitud desde la web</h2>
@@ -51,24 +78,18 @@ module.exports = async function handler(req, res) {
   `;
 
   try {
-    const { error } = await resend.emails.send({
-      from: "LogroTaxi Web <web@logrotaxi.com>",
-      to: "larioja@logrotaxi.com",
+    await transporter.sendMail({
+      from: `"LogroTaxi Web" <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_USER,
       replyTo: email,
       subject: "Nueva solicitud desde la web (Reserva/Consulta)",
+      text: textBody,
       html: htmlBody,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return res
-        .status(500)
-        .json({ error: "No se pudo enviar el correo. Inténtelo más tarde." });
-    }
-
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error("Resend error:", err);
+    console.error("SMTP error:", err);
     return res
       .status(500)
       .json({ error: "No se pudo enviar el correo. Inténtelo más tarde." });
